@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Rockets = () => (
-  <div>Rockets</div>
+  <div className="inside">Rockets</div>
 );
 
 export default Rockets;

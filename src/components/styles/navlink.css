@@ -1,0 +1,53 @@
+header {
+  margin-bottom: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  color: blue;
+}
+
+a:focus {
+  text-decoration: underline;
+}
+
+hr {
+  color: #ddd;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 5.2rem;
+  color: #000;
+  text-decoration: none !important;
+}
+
+.logo img {
+  margin-right: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links li:nth-child(2) {
+  margin-right: 1.1rem;
+}
+
+.nav-link {
+  margin-right: 2rem;
+}
+
+.lines {
+  border: 1px solid #777;
+  margin-right: 1.1rem;
+  height: 1.1rem;
+}

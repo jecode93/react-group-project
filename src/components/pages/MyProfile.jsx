@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MyProfile = () => (
-  <div>MyProfile</div>
+  <div className="inside">MyProfile</div>
 );
 
 export default MyProfile;
