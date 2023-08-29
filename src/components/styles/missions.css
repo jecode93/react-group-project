@@ -1,0 +1,19 @@
+table, td, th {
+  border: 1px solid #eee;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+th {
+  height: 40px;
+  padding-left: 0.5rem;
+}
+
+td {
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  vertical-align: top;
+}

@@ -4,7 +4,7 @@ import missionSlice from './missions/missionsSlice';
 
 const store = configureStore({
   reducer: {
-    rocketReducer,
+    rockets: rocketReducer,
     missions: missionSlice,
   },
 });
