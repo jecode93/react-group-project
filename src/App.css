@@ -1,0 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.inside {
+  padding: 0 1rem;
+}
