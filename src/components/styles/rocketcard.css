@@ -9,7 +9,7 @@
 }
 
 .btn {
-  margin-top: 1.5rem;
+  /* margin-top: 1.5rem; */
   padding: 0.5rem 1rem;
   background: #337ab7;
   border: none;
@@ -32,16 +32,32 @@
   color: white;
   padding: 0.1rem 0.4rem;
   border-radius: 4px;
-  display: none
 }
 
 .btn-cancel {
   border: 1px solid #337ab7;
-  margin-top: 1.5rem;
+
+  /* margin-top: 1.5rem; */
   padding: 0.5rem 1rem;
   border-radius: 4px;
   background: transparent;
   color: #337ab7;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.btn-cancel:hover {
+  background-color: #286090;
+  color: white;
+  transition: ease-in 0.2s;
+}
+
+button {
+  margin-top: 1.5rem;
+  border: none;
+  background: transparent;
+}
+
+button:hover {
+  transition: ease-in 0.2s;
 }

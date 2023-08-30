@@ -7,50 +7,36 @@ import { rocketsReserve } from '../redux/rockets/rocketsSlice';
 const RocketCard = ({
   id, name, description, image,
 }) => {
-  const [reservation, setReservation] = useState('Reserve Rocket');
-  const [reservedText, setReservedText] = useState('Reserved');
   const [isReserved, setIsReserved] = useState(false);
   const { rockets } = useSelector((state) => state.rockets);
 
   const dispatch = useDispatch();
 
-  const handleClick = () => {
-    dispatch(rocketsReserve(id));
-    rockets.map((rocket) => {
-      if (rocket.reserved === isReserved) {
+  const handleClick = (articleId) => {
+    dispatch(rocketsReserve(articleId));
+    rockets.map(({ reserved }) => {
+      if (reserved === isReserved) {
         setIsReserved(true);
-        const reserve = document.querySelector('.reserved');
-        // const cancel = document.querySelector('.btn-cancel');
-        reserve.style.display = 'inline-block';
-        setReservation('Cancel Reservation');
-        setReservedText('Reserved');
-        // cancel.classList.remove('btn');
-        // cancel.classList.add('btn-cancel');
-        console.log(`${rocket.reserved} ${rocket.id}`);
       } else {
         setIsReserved(false);
-        const reserve = document.querySelector('.reserved');
-        // const cancel = document.querySelector('.btn-cancel');
-        setReservation('Reserve Rocket');
-        setReservedText('Reserved');
-        reserve.style.display = 'none';
-        // cancel.classList.add('btn');
-        // cancel.classList.remove('btn-cancel');
       }
-      return rocket;
+      return reserved;
     });
   };
 
   return (
-    <article className="rocket-card">
+    <article key={id} className="rocket-card">
       <img src={image} width={300} alt={name} />
       <div className="info">
         <h2 className="title">{name}</h2>
         <p className="desc">
-          <span className="reserved">{reservedText}</span>
+          {isReserved && <span className="reserved">Reserved</span>}
           {description}
         </p>
-        <button type="button" className="btn" onClick={handleClick}>{reservation}</button>
+        <button type="button" onClick={() => handleClick(id)}>
+          {!isReserved && <span className="btn">Reserve Rocket</span>}
+          {isReserved && <span className="btn-cancel">Cancel Reservation</span>}
+        </button>
       </div>
     </article>
   );

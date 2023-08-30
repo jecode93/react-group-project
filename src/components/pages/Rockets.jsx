@@ -14,7 +14,6 @@ const Rockets = () => {
   const rocketQuery = rockets.map((item) => (
     <RocketCard
       key={item.id}
-      id={item.id}
       name={item.name}
       description={item.description}
       image={item.image}

@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Table from 'react-bootstrap/Table';
-import { getMission } from '../../redux/missions/missionsSlice';
+import { getMission, missionReserve } from '../../redux/missions/missionsSlice';
 import '../styles/missions.css';
 
 const Missions = () => {
-
   const style = {
-    width: 130,
-    verticalAlign: "middle",
-    textAlign: "center",
-  }
+    width: 150,
+    verticalAlign: 'middle',
+    textAlign: 'center',
+  };
 
+  const [isReserved, setIsReserved] = useState(false);
   const { missions } = useSelector((state) => state.missions);
 
   const dispatch = useDispatch();
@@ -19,6 +19,18 @@ const Missions = () => {
   useEffect(() => {
     dispatch(getMission());
   }, [dispatch]);
+
+  const handleClick = (articleId) => {
+    dispatch(missionReserve(articleId));
+    missions.map(({ reserved }) => {
+      if (reserved === isReserved) {
+        setIsReserved(true);
+      } else {
+        setIsReserved(false);
+      }
+      return reserved;
+    });
+  };
 
   return (
     <div className="inside">
@@ -31,18 +43,28 @@ const Missions = () => {
           </tr>
         </thead>
         <tbody>
-          { missions.map((item) => (
-            <tr key={item.mission_id}>
-              <td style={{width: 150}}>
+          { missions.map(({
+            id, name, description, reserved,
+          }) => (
+            <tr key={id}>
+              <td style={{ width: 150 }}>
                 <b>
-                  {item.mission_name}
+                  {name}
                 </b>
               </td>
               <td>
-                {item.description}
+                {description}
               </td>
-              <td style={style}>Not a member</td>
-              <td style={style}>Join mission</td>
+              <td style={style}>
+                <button type="button">
+                  {reserved ? <span className="active">Active member</span> : <span className="not-active">Not a member</span>}
+                </button>
+              </td>
+              <td style={style}>
+                <button type="button" onClick={() => handleClick(id)}>
+                  {reserved ? <span className="leave">Leave Mission</span> : <span className="join">Join Mission</span>}
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
