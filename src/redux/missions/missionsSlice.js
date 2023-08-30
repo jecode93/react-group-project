@@ -18,17 +18,13 @@ const missionSlice = createSlice({
     error: undefined,
   },
   reducers: {
-    spacejet: (state, action) => {
-      const myState = state;
-      const newState = myState.missions.map((jet1) => {
-        if (jet1.id !== action.payload) {
-          return jet1;
-        }
-        return {
-          ...jet1, mission: !jet1.mission,
-        };
+
+    missionReserve: (state, action) => {
+      const newState = state.missions.map((mission) => {
+        if (mission.id !== action.payload) return mission;
+        return { ...mission, reserved: !mission.reserved };
       });
-      myState.missions = newState;
+      state.missions = newState;
     },
   },
 
@@ -37,7 +33,14 @@ const missionSlice = createSlice({
       state.isLoading = true;
     }).addCase(getMission.fulfilled, (state, action) => {
       state.isLoading = false;
-      state.missions = action.payload;
+      const realMission = [];
+      action.payload.map((mission) => realMission.push({
+        id: mission.mission_id,
+        name: mission.mission_name,
+        description: mission.description,
+        reserved: false,
+      }));
+      state.missions = realMission;
       state.error = '';
     }).addCase(getMission.rejected, (state, action) => {
       state.isLoading = false;
@@ -47,6 +50,6 @@ const missionSlice = createSlice({
   },
 });
 
-export const { spacejet } = missionSlice.actions;
+export const { missionReserve } = missionSlice.actions;
 export { getMission };
 export default missionSlice.reducer;
