@@ -36,7 +36,7 @@ const rocketSlice = createSlice({
       const realRocket = [];
       action.payload.map((rocket) => realRocket.push({
         id: rocket.id,
-        name: rocket.rocket_name,
+        name: rocket.name,
         description: rocket.description,
         image: rocket.flickr_images[1],
         reserved: false,

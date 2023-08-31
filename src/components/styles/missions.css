@@ -1,0 +1,61 @@
+table,
+td,
+th {
+  border: 1px solid #eee;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+th {
+  height: 40px;
+  padding-left: 0.5rem;
+}
+
+td {
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  vertical-align: top;
+}
+
+.active {
+  background-color: green;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  color: white;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.not-active {
+  background-color: gray;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  color: white;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.join {
+  border: 1px solid #337ab7;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: transparent;
+  color: #337ab7;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.leave {
+  border: 1px solid red;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: transparent;
+  color: red;
+  font-size: 1rem;
+  cursor: pointer;
+}
