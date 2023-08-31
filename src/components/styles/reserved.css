@@ -1,0 +1,14 @@
+h2 {
+  margin-bottom: 1rem;
+}
+
+.mission-list {
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.mission-name {
+  border: 1px solid #eee;
+  padding: 1rem;
+  font-weight: 600;
+}
