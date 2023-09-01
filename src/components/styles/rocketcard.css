@@ -9,7 +9,6 @@
 }
 
 .btn {
-  /* margin-top: 1.5rem; */
   padding: 0.5rem 1rem;
   background: #337ab7;
   border: none;
@@ -36,8 +35,6 @@
 
 .btn-cancel {
   border: 1px solid #337ab7;
-
-  /* margin-top: 1.5rem; */
   padding: 0.5rem 1rem;
   border-radius: 4px;
   background: transparent;
