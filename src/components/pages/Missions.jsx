@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Table from 'react-bootstrap/Table';
-import { getMission, missionReserve } from '../../redux/missions/missionsSlice';
+import { missionReserve } from '../../redux/missions/missionsSlice';
 import '../styles/missions.css';
 
 const Missions = () => {
@@ -15,10 +15,6 @@ const Missions = () => {
   const { missions } = useSelector((state) => state.missions);
 
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getMission());
-  }, [dispatch]);
 
   const handleClick = (articleId) => {
     dispatch(missionReserve(articleId));
