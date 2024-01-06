@@ -1,6 +1,6 @@
 <h3 align="center"><b>Space Travelers' Hub</b></h3>
 
-<p align="center">Space Travelers' Hub is a single page application (SPA), where users can book rockets and join selected space missions of SpaceX. SPA uses real live data from the SpaceX API. Built with React.</p>
+<p align="center">Space Travelers' Hub is a single-page application (SPA), where users can book rockets and join selected space missions of SpaceX. STH uses real live data from the SpaceX API. Built with React.</p>
 
 <a name="readme-top"></a> 
 
@@ -29,7 +29,7 @@
 
 # 📖 "Space Travelers' Hub" <a name="about-project"></a>
 
-**Space Travelers' Hub** SPA displays a real live data of SpaceX rockets and missions.
+**Space Travelers' Hub** SPA displays real live data of SpaceX rockets and missions.
 Using this SPA users can:
 - book SpaceX rockets
 - join SpaceX space missions
