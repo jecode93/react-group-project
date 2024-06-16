@@ -74,7 +74,7 @@ SPA consists of Rockets, Missions, and the My Profile section:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live demo](https://space-travelers-hub-uro6.onrender.com)
+- [Live demo](https://jecode93-space-travelers-hub.vercel.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
