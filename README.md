@@ -67,7 +67,7 @@ SPA consists of Rockets, Missions, and the My Profile section:
 
 - **book SpaceX rockets, cancel the previously made booking**
 - **join SpaceX space missions, leave the mission the user joined earlier**
-- **view all reserved rockets and space missions**
+- **View all reserved rockets and space missions**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,9 +85,9 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run and modify this project you need:
+To run and modify this project you need:
 
-- gitHub account;
+- GitHub account;
 - git installed on your OS;
 - VSCode (or another code editor);
 - modern browser (supporting HTML5 and CSS3) is highly recommended;
@@ -130,7 +130,7 @@ To launch the test runner in the interactive watch mode:
 
 Currently, there are no test scripts available, but the libraries(React Testing Library and Jest) are set up.
 
-You can also check linter errors by running this commands:
+You can also check linter errors by running these commands:
 > npx stylelint "**/*.{css,scss}"<br />
 > npx eslint "**/*.{js,jsx}"
 
@@ -189,9 +189,9 @@ If you like this project just star it!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-We would like to thank Microverse program for the knowledge and skills we have acquired in Modules 1, 2 and 3.
+We would like to thank the Microverse program for the knowledge and skills we have acquired in Modules 1, 2, and 3.
 
-We are grateful for all previous project reviewers for their advice. Thanks to them we could build this app.
+We are grateful to all previous project reviewers for their advice. Thanks to them we could build this app.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -200,7 +200,7 @@ We are grateful for all previous project reviewers for their advice. Thanks to t
 
 - **Why there is no Dragons section in this project?**
 
-  - Dragons section is not required when the team has 3 members. Therefore we decided to exclude this sections from the project.
+  - Dragons section is not required when the team has 3 members. Therefore we decided to exclude these sections from the project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
